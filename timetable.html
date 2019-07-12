@@ -1,0 +1,147 @@
+<html>
+    <head>
+        <title>TIME TABLE</title>
+        
+        <style>
+             table 
+             {
+                 margin: 100px;
+             border-collapse : collapse;
+}
+
+table, th, td 
+{
+  border: 1px solid black;
+}
+                
+        
+                .emp-input{
+
+border: 1px solid;
+
+}
+
+.emp-input-spacing{
+
+display: block;
+
+margin-left: 10px;
+
+margin-top: 10px;
+
+}
+        
+                </style>
+                <script type="text/javascript" src="timetable.js"></script>
+    </head>
+    <body>
+
+            <div>
+    
+                <fieldset><legend>Add TRAINER</legend>
+
+    
+                <select id="eid" value="SKILL" class="emp-input-spacing" placeholder="SKILL">
+                            <option value="Hindi">SELECT SUBJECT</option>
+                            <option value="Hindi">HINDI</option>
+        
+                            <option value="PHYSICS">physics</option>
+                            <option value="BIOLOGY">BIOLOGY</option>
+        
+                            <option value="ENGLISH">ENGLISH</option>
+        
+                            <option value="COMPUTER SCIENCE">COMPUTER</option>
+        
+                            <option value="SPORTS">SPORTS</option>
+        
+                            
+        
+        
+                            
+                            
+                        </select>    
+        
+    
+                    <input type="text" id="eName" class="emp-input emp-input-spacing" placeholder="Name"/>
+    
+                    <input type="email" id="eEmail" class="emp-input emp-input-spacing" placeholder="Email"/>
+    
+                     <input type="button"  value="SAVE" onclick="savetrainer()"class="emp-input-spacing" />
+    
+                    
+    
+                </fieldset>
+                <fieldset><legend>AllOCATE TRAINER</legend>
+                        
+                      CLASS :  <select id="class" value="SKILL">
+                                <option value="CLASS A">CLASS A</option>
+                                <option value="CLASS B">CLASS B</option>
+                                </select>
+                       SLOT :         <select id="SLOT" value="SKILL">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        </select>  
+                       SUBJECT :     <select onchange="searchtrainer()" id="searchBy">
+                            <option value="Hindi">SELECT SUBJECT</option>
+                            <option value="Hindi">HINDI</option>
+        
+                            <option value="PHYSICS">physics</option>
+                            <option value="BIOLOGY">BIOLOGY</option>
+        
+                            <option value="ENGLISH">ENGLISH</option>
+        
+                            <option value="COMPUTER SCIENCE">COMPUTER</option>
+        
+                            <option value="SPORTS">SPORTS</option>
+                            </select>
+                     TRAINER :  <select id="list">
+                          
+                     </select>
+                     
+                     <input type="button" value="Assign" onclick="assign()">
+        
+
+                </fieldset>
+
+
+                <fieldset>
+                     CLASS  :   <select id="class" value="SKILL" class="emp-input-spacing">
+                                <option value="CLASS A">CLASS A</option>
+                                <option value="CLASS B">CLASS B</option>
+                                </select>
+                </fieldset>
+                <table>
+                    <tr><td>SLOT</td>
+                        <td>  1  </td>
+                        <td>  2  </td>
+                        <td>  3  </td>
+                        <td>  4  </td>
+                        <td>  5   </td>
+                        <td>  6   </td>
+
+                    </tr>
+                    <tr><td>SUBJECT</td>
+                        <td id="s1"></td>
+                        <td id="s2"></td>
+                        <td id="s3"></td>
+                        <td id="s4"></td>
+                        <td id="s5"></td>
+                        <td id="s6"></td>
+
+                    </tr>
+                    <tr>
+                            <td>TRAINER</td>
+                            <td id="t1">    </td>
+                            <td id="t2">   </td>
+                            <td id="t3">   </td>
+                            <td id="t4">   </td>
+                            <td id="t5">    </td>
+                            <td id="t6">    </td>
+
+                    </tr>
+                </table>
+
